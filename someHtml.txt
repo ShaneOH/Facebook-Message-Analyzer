@@ -1,0 +1,16 @@
+not needed from beginning: 
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Shane O&#039;Hanlon - Messages</title><link rel="stylesheet" href="../html/style.css" type="text/css" /></head><body><div class="nav"><img src="../photos/profile.jpg" /><ul><li><a href="../index.htm">Profile</a></li><li><a href="../html/contact_info.htm">Contact Info</a></li><li><a href="../html/wall.htm">Wall</a></li><li><a href="../html/photos.htm">Photos</a></li><li><a href="../html/synced_photos.htm">Synced Photos</a></li><li><a href="../html/videos.htm">Videos</a></li><li><a href="../html/friends.htm">Friends</a></li><li class="selected">Messages</li><li><a href="../html/pokes.htm">Pokes</a></li><li><a href="../html/events.htm">Events</a></li><li><a href="../html/settings.htm">Settings</a></li><li><a href="../html/security.htm">Security</a></li><li><a href="../html/ads.htm">Ads</a></li><li><a href="../html/mobile_devices.htm">Mobile Devices</a></li><li><a href="../html/places.htm">Places</a></li><li><a href="../html/survey_responses.htm">Survey Responses</a></li></ul></div><div class="contents"><h1>Shane O&#039;Hanlon</h1><div>
+
+example of full message:
+
+<div class="message"><div class="message_header"><span class="user">Shane O&#039;Hanlon</span><span class="meta">Friday, May 8, 2015 at 10:31am EDT</span></div></div><p>this is an example message</p>
+
+example of full thread:
+
+<div class="thread">Friend Name, Shane O&#039;Hanlon<div class="message"><div class="message_header"><span class="user">Friend Name</span><span class="meta">Tuesday, June 16, 2015 at 3:49pm EDT</span></div></div><p>example message 2</p><div class="message"><div class="message_header"><span class="user">Shane O&#039;Hanlon</span><span class="meta">Monday, June 15, 2015 at 6:16pm EDT</span></div></div><p>example message 1 - note this is the first message sent in thread</p>
+
+very last bit of file:
+
+<div class="message_header"><span class="user">Shane O&#039;Hanlon</span><span class="meta">Sunday, April 14, 2013 at 11:56pm EDT</span></div></div><p>this is a message from a seemingly random point in a seemingly random thread</p></div></div></div><div class="footer">Downloaded by Shane O&#039;Hanlon on Sunday, June 28, 2015 at 5:25am EDT</div></body></html>
+
