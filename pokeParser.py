@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import logging
+import logging, sqlite3
 logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
 # parser.py - parse HTML
 
@@ -7,6 +7,13 @@ import os
 from html.parser import HTMLParser
 
 table = {}
+list = []
+
+pokeDB = sqlite3.connect('poke.db')
+db = pokeDB.cursor()
+
+#create table
+db.execute('''CREATE TABLE pokes (poke text, time text)''')
 
 class MyHTMLParser(HTMLParser):
     def __init__(self):
@@ -58,10 +65,18 @@ class MyHTMLParser(HTMLParser):
        
         if self.name and self.timestamp:
             logging.debug("We're now setting " + str(self.name) + " = " + str(self.timestamp))
+            list = [self.name, self.timestamp]
+            print(list)
             table[self.name] = self.timestamp
+            self.name = ""
+            self.timestamp = ""
+            #insert a row of data
+            db.execute("INSERT INTO pokes VALUES (?,?)", list)
 
 pokes = open('/home/shane/Documents/FacebookProject/FacebookData/html/pokes.htm')
 data = pokes.read()
 parser = MyHTMLParser()
 parser.feed(data)
 print(table)
+pokeDB.commit()
+pokeDB.close()
