@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - 
 from html.parser import HTMLParser
 
 #connect to SQLite database
-messageDB = sqlite3.connect('testMessages.db')
+messageDB = sqlite3.connect('messages.db')
 db = messageDB.cursor()
 
 class MyHTMLParser(HTMLParser):
@@ -81,9 +81,9 @@ class MyHTMLParser(HTMLParser):
             #insert message into table
             db.execute('''INSERT INTO "'''+self.thread+'''" VALUES (?,?,?)''', self.list)
 
-testMessages = open('/home/shane/Documents/FacebookProject/FacebookData/html/testMessages.htm')
-data = testMessages.read()
+messages = open('/home/shane/Documents/FacebookProject/FacebookData/html/messages.htm')
 parser = MyHTMLParser()
-parser.feed(data)
+for line in messages:
+    parser.feed(line)
 messageDB.commit()
 messageDB.close()
